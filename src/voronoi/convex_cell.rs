@@ -157,10 +157,10 @@ impl< M: ConvexCellMarker> Iterator for ConvexCellDecomposition<'_, M> {
 pub(crate) trait ConvexCellMarker: Clone + Send + Sync + Default {}
 
 #[derive(Copy, Clone, Default)]
-pub(crate) struct WithoutFaces;
+pub struct WithoutFaces;
 impl ConvexCellMarker for WithoutFaces {}
 #[derive(Copy, Clone, Default)]
-pub(crate) struct WithFaces;
+pub struct WithFaces;
 impl ConvexCellMarker for WithFaces {}
 
 /// Meshless representation of a Voronoi cell as an intersection of
